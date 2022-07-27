@@ -6,22 +6,21 @@ import {
     Image,
     Button
 } from '@chakra-ui/react'
+import Link from 'next/link'
 
 
-
-const Login = () => {
+const Login = ({ setUser = () => { } }: { setUser?: Function }) => {
     return (
         <Container>
             <Stack spacing={3} m={8} >
                 <Center>
                     <Image src='https://via.placeholder.com/300x200' alt='logo' />
                 </Center>
-
                 <FormControl>
                     <Center>
                         <FormLabel>Usuario</FormLabel>
                     </Center>
-                    <Input type={'text'} name='username' data-testid='username' />
+                    <Input type={'text'} name='username' data-testid='username' onChange={e => setUser(e.target.value)} />
                 </FormControl>
                 <FormControl >
                     <Center>
@@ -31,11 +30,12 @@ const Login = () => {
                 </FormControl>
                 <FormControl >
                     <Center>
-                        <Button data-testid='submit'>
-                            Ingresar
-                        </Button>
+                        <Link passHref href={'/dashboard'}>
+                            <Button data-testid='submit'>
+                                Ingresar
+                            </Button>
+                        </Link>
                     </Center>
-
                 </FormControl>
                 <FormControl >
                     <Center>

@@ -1,10 +1,10 @@
-import { cleanup, fireEvent, render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 import Login from '../../pages/login'
 
 afterEach(cleanup);
 
 describe("Login Page", () => {
-  test("should render Login Page with corrects components", () => {
+  it("should render Login Page with corrects components", () => {
     const { getByTestId } = render(
       <Login />
     );
