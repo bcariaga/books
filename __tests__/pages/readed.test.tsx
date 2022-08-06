@@ -7,6 +7,6 @@ describe('readed books', () => {
             <Readed />
         );
 
-        expect(getByTestId('title')).toBeInTheDocument()
+        expect(getByTestId('readed')).toBeInTheDocument()
     })
 })

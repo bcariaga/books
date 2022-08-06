@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [user, setUser] = React.useState('');
   return (
     <ChakraProvider>
-      <Center w={'100%'}>
+      <Center>
         <Component {...pageProps} user={user} setUser={setUser} />
       </Center>
     </ChakraProvider>

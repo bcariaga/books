@@ -9,7 +9,7 @@ interface BookItemProps {
     imgUrl: string
 }
 function BookItem({ ISBN, author, editorial, title, imgUrl }: BookItemProps) {
-    return (<Stack data-testid="title" spacing={3} m={8} direction={{
+    return (<Stack spacing={3} m={8} direction={{
         base: 'row'
     }}>
         <Flex flex={1}>
@@ -36,8 +36,8 @@ function BookItem({ ISBN, author, editorial, title, imgUrl }: BookItemProps) {
 
 const Readed = () => {
     return (
-        <Container overflow={'auto'} mt={8}>
-            <Center>
+        <Container overflow={'auto'} mt={8} data-testid="readed" >
+            <Center data-testid="title">
                 <Text fontSize='3xl' > Leidos </Text>
             </Center>
             <BookItem key={'9789504975847'} ISBN='9789504975847' author='Bonelli Florencia' editorial='PLANETA' title='EL HECHIZO DEL AGUA' imgUrl='https://contentv2.tap-commerce.com/cover/medium/9789504975847_1.jpg?id_com=1113&w=200' />
